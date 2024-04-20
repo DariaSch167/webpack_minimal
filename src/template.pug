@@ -1,0 +1,71 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title PR_3 DRAFT
+    //- link(rel='preconnect', href='https://fonts.googleapis.com')
+    //- link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+    //- link(href='https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap', rel='stylesheet')
+  body
+    // Часть 1 - ветка target
+    .general_wrapper
+      header
+        .header_wrapper
+          img#logoImg(src=require('./images/Logo.png'), alt='logo')
+          #header_top
+            img#userImg(src=require('./images/UserAvatar.png'), alt='user')
+            button#target_add_button.target_add_button
+          #header_middle
+            button#home_page.home_page
+            button#target_page.target_page
+            button#setting_page.setting_page
+          #header_bottom
+            button#help_page.help_page
+            button#logout_page.logout_page
+      main
+        section.target_page_wrapper
+          .target_wrapper
+          .target_empty-error
+        // Часть 2 - ветка form
+        section.bodyForm_wrapper
+          .bodyForm
+            form#goalForm
+              .left
+                .el
+                  label(for='goal') &Ncy;&acy;&zcy;&vcy;&acy;&ncy;&icy;&iecy; &tscy;&iecy;&lcy;&icy;
+                  input#goal.item(type='text', name='goal', placeholder='Введите название цели', required='')
+                .el
+                  label(for='category') &Kcy;&acy;&tcy;&iecy;&gcy;&ocy;&rcy;&icy;&yacy;
+                  select#category.choice(name='category', required='')
+                    option(value='') &Vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &kcy;&acy;&tcy;&iecy;&gcy;&ocy;&rcy;&icy;&yucy;
+                    option(value='house') &Dcy;&ocy;&mcy;
+                    option(value='car') &Mcy;&acy;&shcy;&icy;&ncy;&acy;
+                    option(value='equipment') &Tcy;&iecy;&khcy;&ncy;&icy;&kcy;&acy;
+                    option(value='kids') &Dcy;&iecy;&tcy;&icy;
+                    option(value='education') &Ocy;&bcy;&ucy;&chcy;&iecy;&ncy;&icy;&iecy;
+                    option(value='travel') &Ocy;&tcy;&pcy;&ucy;&scy;&kcy;
+                    option(value='shopping') &SHcy;&ocy;&pcy;&pcy;&icy;&ncy;&gcy;
+                    option(value='other') &Dcy;&rcy;&ucy;&gcy;&ocy;&iecy;
+                .el
+                  label(for='amount') &Scy;&ucy;&mcy;&mcy;&acy;, &kcy;&ocy;&tcy;&ocy;&rcy;&ucy;&yucy; &vcy;&ycy; &khcy;&ocy;&tcy;&icy;&tcy;&iecy; &ncy;&acy;&kcy;&ocy;&pcy;&icy;&tcy;&softcy;, &rcy;&ucy;&bcy;.
+                  input#amount.item(type='text', name='amount', placeholder='Введите сумму', pattern='[0-9]*', title='Только цифры разрешены', required='')
+                .el
+                  label(for='priority') &Pcy;&rcy;&icy;&ocy;&rcy;&icy;&tcy;&iecy;&tcy; &tscy;&iecy;&lcy;&icy;
+                  select#priority.choice(name='priority', required='')
+                    option(value='') &Vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &pcy;&rcy;&icy;&ocy;&rcy;&icy;&tcy;&iecy;&tcy;
+                    option(value='1') &Vcy;&ycy;&scy;&ocy;&kcy;&icy;&jcy;
+                    option(value='2') &Scy;&rcy;&iecy;&dcy;&ncy;&icy;&jcy;
+                    option(value='3') &Ncy;&icy;&zcy;&kcy;&icy;&jcy;
+                .el
+                  label(for='endDate') &Dcy;&acy;&tcy;&acy; &ocy;&kcy;&ocy;&ncy;&chcy;&acy;&ncy;&icy;&yacy; &ncy;&acy;&kcy;&ocy;&pcy;&lcy;&iecy;&ncy;&icy;&yacy;
+                  input#endDate.item(type='date', name='endDate', required='')
+                .el
+                  label(for='currentAmount') &Scy;&ucy;&mcy;&mcy;&acy;, &kcy;&ocy;&tcy;&ocy;&rcy;&ucy;&yucy; &khcy;&ocy;&tcy;&icy;&tcy;&iecy; &vcy;&ncy;&iecy;&scy;&tcy;&icy; &scy;&iecy;&jcy;&chcy;&acy;&scy;, &rcy;&ucy;&bcy;.
+                  input#currentAmount.item(type='text', name='currentAmount', placeholder='Введите сумму', pattern='[0-9]*', title='Только цифры разрешены')
+                .block_for_btn
+                  button#btn_save(type='submit') &Scy;&ocy;&khcy;&rcy;&acy;&ncy;&icy;&tcy;&softcy;
+                  button#btn_cancel(type='submit') &Ocy;&tcy;&mcy;&iecy;&ncy;&acy;
+              .chooseWrapper
+            #picture.picture
+              img#target_pic(src='https://s3-alpha-sig.figma.com/img/32c0/c596/6dd2b796fc33de37262580d822a2547b?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oPoiOinwFJDcXxapgbpcnxyqfHLDNYcMJgjQtgtm2HcMl8CG0iwMIQghH0FlWqnEafjulE1uzyz-nqMOjHGujiaikq0ebkgBAKB5Q2EbLS1Sb5qomlYElTQMnjZyssBXAVfjzr5VBNAap0p7w4xcriL7-ZcT0Q9jVke2Z0LXsfeJj7b-XtYfz5uKXaNeDtrtum4fzO68XkzhkmSwsBF8Wrp1w3trBFOKPvPWqI-mFBzNCxBS8stnKffzMW~TTsoFjfnLC8drxVQA176CmCadTQs5~cjvQZ48Cws3th-3lxYEoueVpEQttaGo-ngg2f7HDgvimW9K1vKFYL0wDklWTw__', alt='')
